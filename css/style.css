@@ -1,0 +1,339 @@
+@charset 'utf-8';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Helvetica Neue',
+    YuGothic,
+    'ヒラギノ角ゴ ProN W3',
+    'Hiragino Kaku Gothic ProN',
+    Arial, 
+    'メイリオ'
+    Meiryo,
+    system-ui,
+    sans-serif;
+}
+
+img {
+    display: block;
+}
+
+.header {
+    width: 200px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: #fff;
+}
+
+.header-logo {
+    margin: 40px auto 80px;
+}
+
+.header-logo a img{
+    width: 160px;
+}
+
+.gnav-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gnav-list {
+    width: 80%;
+    margin: 0 auto;
+    align-items: start;
+    justify-content: start;
+    flex-grow: 2.5;
+}
+.gnav-list ul{
+    text-align: left;
+    list-style: none;
+}
+.gnav-list ul li {
+    margin-bottom: 1rem;
+}
+.gnav-list li a{
+    font-size: 0.8rem;
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    transition: 1s ease-in-out 0s;
+}
+.gnav-list li a:hover{
+    border-bottom: 1px solid #000;
+}
+.gnav-hidden {
+    display: none;
+}
+.gnav-link {
+    display: flex;
+    justify-content: center;
+    padding: 32px 0;
+    flex-grow: 1;
+}
+.gnav-link img {
+    margin: 0 8px;
+}
+
+main {
+    margin-left: 200px;
+}
+.main-view {
+    height: 100vh;
+    display: flex;
+    background: url(./img/mv-bg@2x.jpg) no-repeat center center / cover;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+.main-view img {
+    height: 80vh;
+    width: auto;
+    max-height: 700px;
+    margin: auto auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-view_text {
+    position: absolute;
+    left: 4%;
+    bottom: 8%;
+    line-height: 1;
+    animation: text 2s ease-in;
+}
+@keyframes text {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.mv-text_numdate {
+    display: inline-flex;
+    font-size: 1.2rem;
+    background-color: #fff;
+    margin-bottom: 16px;
+}
+.mv-text_eng {
+    display: inline-flex;
+    font-size: 2.8vw;
+    background-color: #fff;
+    margin-bottom: 8px;
+}
+.mv-text_jp {
+    display: inline-flex;
+    font-size: 2.8vw;
+    background-color: #fff;
+}
+
+.backnumbers_heading {
+    padding: 2em 1em;
+    font-size: 1rem;
+    font-weight: normal;
+    background: #f5f5f5;
+}
+.backnumbers_heading::first-line{
+    font-size: 1.5rem;
+}
+.backnumber-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+.backnumber-list_item {
+    flex: 40%;
+    justify-content: start;
+    padding: 40px 20px;
+    text-align: start;
+}
+.backnumber-list_item a{
+    text-decoration: none;
+}
+.backnumber-list_item p {
+    margin: 8px;
+}
+.item-date {
+    color: #888;
+    font-size: 0.8rem;
+}
+.item-title{
+    color: #000;
+    font-size: 1.2rem;
+}
+.backnumber-list_item img {
+    max-width: 300px;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.item-101 {
+    background-color: #ecf4f9;
+}
+.item-100 {
+    background-color: #fbf3d2;
+}
+.item-99 {
+    background-color: #f9f2eb;
+}
+.item-98 {
+    background-color: #fae8c2;
+}
+.item-97 {
+    background-color: #e2efe7;
+}
+.item-96 {
+    background-color: #f2f5fb;
+}
+
+@media screen and (max-width: 767px){
+    .header {
+        height: 60px;
+        width: 100%;
+        z-index: 1;
+        top: 0px;
+        left: 0;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .header-logo {
+        width: 120px;
+        margin: 0;
+    }
+    #gnav-open {
+        position: fixed;
+        height: 40px;
+        width: 40px;
+        right: 24px;
+        top: 24px;
+        display: inline-block;
+        width: 30px;
+        height: 22px;
+        vertical-align: middle;
+        z-index: 1000;
+    }
+    #gnav-open span{
+        position: absolute;
+        height: 1px;
+        width: 30px;
+        background: #000;
+        transition: .3s ease-in-out;
+    }
+    #gnav-open span::before,
+    #gnav-open span::after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 1px;
+        width: 30px;
+        background: #000;
+        display: block;
+        transition: 0.3s ease-in-out;
+    }
+    #gnav-open span::before {
+        bottom: -8px;
+    }
+    #gnav-open span::after {
+        bottom: -16px;
+    }
+    #gnav-input:checked ~ #gnav-open span { 
+        background: transparent;
+    }    
+    #gnav-input:checked ~ #gnav-open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    #gnav-input:checked ~ #gnav-open span::after {
+        bottom: 0;
+        transform: rotate(-45deg);
+    }
+
+    #gnav-close {
+        display: none;
+        position: fixed;
+        z-index: 90;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: 0.5s ease-in-out;
+    }
+    #gnav-input:checked ~ #gnav-close {
+        display: block;
+        opacity: 0.5;
+    }
+    #gnav-input:checked ~ .gnav-container {
+        transform: translateX(0%);
+    }
+
+    .gnav-container {
+        display: flex;
+        position: absolute;
+        padding: 40px;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        width: 100%;
+        background: #fff;
+        transition: 0.5s ease-in-out;
+        transform: translateX(105%);
+    }
+    .gnav-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 2;
+    }
+
+    .gnav-item {
+        border-bottom: 1px solid #000;
+        margin: 10px;
+        padding-bottom: 20px;
+    }
+    .gnav-item a{
+        font-size: 12px;
+        display: block;
+        width: 200px;
+        text-align: center;
+    }
+    main {
+        margin: 0;
+    }
+    .main-view img {
+        width: 80vw;
+        height: auto;
+        max-width: 320px;
+    }
+    .mv-text_numdate {
+        font-size: 1rem;
+    }
+    .mv-text_eng {
+        font-size: 2rem;
+    }
+    .mv-text_jp {
+        font-size: 1.5rem;
+    }
+    .backnumbers_heading {
+        font-size: 0.6rem;
+    }
+    .backnumbers_heading::first-line {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .backnumber-list_item {
+        flex: 100%;
+    }
+    .backnumber-list_item img {
+        width: 50%;
+    }
+
+}

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
     <title>&Premium</title>
 </head>
@@ -11,108 +12,100 @@
         <h1 class="header-logo">
             <a href="#"><img src="./img/header-logo.svg" alt=""></a>
         </h1>
-        <div class="gnav-container">
-        <nav class="gnav-list">
-            <ul >
-                <li><a href="#">MAGAZIN</a></li>
-                <li><a href="#">LIFESTYLE</a></li>
-                <li><a href="#">CULTURE</a></li>
-                <li><a href="#">FASHION</a></li>
-                <li><a href="#">BEAUTY</a></li>
-                <li><a href="#">FOOD</a></li>
-                <li><a href="#">COLUMN</a></li>
-            </ul>
-        </nav>
-        <div class="gnav-link">
-            <a href="https://www.facebook.com/AndPremium2013/"><img src="./img/ico-facebook-fill.svg" alt=""></a>
-            <a href="https://twitter.com/and_premium"><img src="./img/ico-twitter-fill.svg" alt=""></a>
-            <a href="https://www.instagram.com/and_premium/"><img src="./img/ico-instagram-line.svg" alt=""></a>
-            <a href="https://www.youtube.com/channel/UCGwRhr2ARi6xOASbdolc9Ag/featured"><img src="./img/ico-youtube-fill.svg" alt=""></a>
+        <div class="gnav-toggle">
+            <input type="checkbox" id="gnav-input" class="gnav-hidden">
+            <label id="gnav-open" for="gnav-input">
+                <span></span>
+            </label>
+            <label class="gnav-unshown" id="gnav-close" for="gnav-input"></label>
+            <div class="gnav-container">
+                <nav class="gnav-list">
+                    <ul >
+                        <li><a href="#">MAGAZIN</a></li>
+                        <li><a href="#">LIFESTYLE</a></li>
+                        <li><a href="#">CULTURE</a></li>
+                        <li><a href="#">FASHION</a></li>
+                        <li><a href="#">BEAUTY</a></li>
+                        <li><a href="#">FOOD</a></li>
+                        <li><a href="#">COLUMN</a></li>
+                    </ul>
+                </nav>
+                <div class="gnav-link">
+                    <a href="https://www.facebook.com/AndPremium2013/"><img src="./img/ico-facebook-fill.svg" alt=""></a>
+                    <a href="https://twitter.com/and_premium"><img src="./img/ico-twitter-fill.svg" alt=""></a>
+                    <a href="https://www.instagram.com/and_premium/"><img src="./img/ico-instagram-line.svg" alt=""></a>
+                    <a href="https://www.youtube.com/channel/UCGwRhr2ARi6xOASbdolc9Ag/featured"><img src="./img/ico-youtube-fill.svg" alt=""></a>
+                </div>
+            </div>
         </div>
-    </div>
     </header>
-    <div class="main">
+    <main class="main">
         <div class="main-view">
         <img src="./img/new-issue@2x.png" alt="">
-        <div class="main-view_text mv-text">
+        <div class="main-view_text">
             <div class="mv-text_numdate">
-                <p>
-                    <span class="mv-text_numdate-container">
-                        <span class="date">2022 JUN.</span>
-                        <span class="num">&Premium No. 102</span>
-                    </span>
-                </p>
+                <p>2022 JUN.&Premium No. 102</p>
             </div>
+            <br>
             <div class="mv-text_eng">
-                <p>
-                    <span> Life with Flowers &Greens </span>
-                </p>
+                <p> with Flowers &Greens</p>
             </div>
+            <br>
             <div class="mv-text_jp">
-                <p>
-                    <span>花を飾る、緑と暮らす。</span>
-                </p>
+                <p>花を飾る、緑と暮らす。</p>
             </div>
         </div>
     </div>
     <section class="backnumbers">
         <h2 class="backnumbers_heading">
-            backnumbers <br> バックナンバー
+            BACKNUMBERS <br> バックナンバー
         </h2>
         <ul class="backnumber-list">
-            <li class="backnumber-list_item 101">
+            <li class="backnumber-list_item item-101">
                 <a href="#">
                     <img src="./img/101.jpg" alt="">
-                    <span class="date">Mar.20,2022</span>
-                    <span class="num">&Premium No.101</span>
-                    <span class="title">IN GOOD TASTE / センスがいいてどういうことですか？</span>
+                    <p class="item-date">Mar.20,2022<br>&Premium No.101</p>
+                    <p class="item-title">IN GOOD TASTE ／ センスがいいてどういうことですか？</p>
                 </a>
             </li>
-            <li class="backnumber-list_item 100">
+            <li class="backnumber-list_item item-100">
                 <a href="#">
                     <img src="./img/100.jpg" alt="">
-                    <span class="date">Feb.19,2022</span>
-                    <span class="num">&Premium No.100</span>
-                    <span class="title">Kissaten 100 / 喫茶店、1000のこと</span>
+                    <p class="item-date">Feb.19,2022<br>&Premium No.100</p>
+                    <p class="item-title">Kissaten 100 ／ 喫茶店、1000のこと</p>
                 </a>
             </li>
-            <li class="backnumber-list_item 99">
+            <li class="backnumber-list_item item-99">
                 <a href="#">
                     <img src="./img/99.jpg" alt="">
-                    <span class="date">Jun.20 ,2022</span>
-                    <span class="num">&Premium No.99</span>
-                    <span class="title">COZY ROOMS / 居心地のいい部屋に、整える。</span>
+                    <p class="item-date">Jun.20 ,2022<br>&Premium No.99</p>
+                    <p class="item-title">COZY ROOMS ／ 居心地のいい部屋に、整える。</p>
                 </a>
             </li>
-            <li class="backnumber-list_item 98">
+            <li class="backnumber-list_item item-98">
                 <a href="#">
                     <img src="./img/98.jpg" alt="">
-                    <span class="date">Dec.20 ,2021</span>
-                    <span class="num">&Premium No.98</span>
-                    <span class="title">SNACK TIME / やっぱり、おやつは大切。</span>
+                    <p class="item-date">Dec.20 ,2021<br>&Premium No.98</p>
+                    <p class="item-title">SNACK TIME ／ やっぱり、おやつは大切。</p>
                 </a>
             </li>
-            <li class="backnumber-list_item 97">
-                <a href="#">
+            <li class="backnumber-list_item item-97">
+                <p href="#">
                     <img src="./img/97.jpg" alt="">
-                    <span class="date">Nov.19 ,2021</span>
-                    <span class="num">&Premium No.97</span>
-                    <span class="title">PEACEFUL MOMENTES / 静かに過ごす時間が、必要です。</span>
+                    <p class="item-date">Nov.19 ,2021<br>&Premium No.97</p>
+                        <p class="item-title">PEACEFUL MOMENTES ／ 静かに過ごす時間が、必要です。</p>
                 </a>
             </li>
-            <li class="backnumber-list_item 96">
+            <li class="backnumber-list_item item-96">
                 <a href="#">
                     <img src="./img/96.jpg" alt="">
-                    <span class="date">Oct.20 ,2021</span>
-                    <span class="num">&Premium No.97</span>
-                    <span class="title">TABLEWARE FOR LIFE / 器を知る。学ぶ、楽しむ。</span>
+                    <p class="item-date">Oct.20 ,2021<br>&Premium No.97</p>
+                    <p class="item-title">TABLEWARE FOR LIFE ／ 器を知る。学ぶ、楽しむ。</p>
                 </a>
             </li>
         </ul>
     </section>
-    </div>
+    </main>
     
-
-    <script></script>
 </body>
 </html>
